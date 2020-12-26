@@ -1,0 +1,55 @@
+Given an integer, N, traverse its digits and determine how many digits evenly divide (i.e.:
+count the number of times N divided by each digit D has a remainder of 0). Print the number of evenly
+divisible digits.
+Note: Each digit is considered to be unique, so each occurrence of the same evenly divisible digit should be
+counted (i.e.: for N=111, the answer is 3).
+
+
+Input Format
+The first line is an integer, T, indicating the number of test cases.
+The T subsequent lines each contain an integer, N.
+
+Output Format
+For every test case, count and print (on a new line) the number of digits in N that are able to evenly divide N
+
+
+Sample input:
+2
+12
+1012
+
+sample output:
+2
+3
+
+
+
+
+Program :
+
+
+
+
+def findDigits(n):
+    m=str(n)
+    c=0
+    for i in m:
+        if(int(i)!=0 and n%int(i)==0):
+            c+=1
+    return c
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input())
+
+    for t_itr in range(t):
+        n = int(input())
+
+        result = findDigits(n)
+
+        fptr.write(str(result) + '\n')
+
+    fptr.close()
+

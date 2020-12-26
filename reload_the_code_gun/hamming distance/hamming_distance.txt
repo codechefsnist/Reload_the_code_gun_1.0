@@ -1,0 +1,45 @@
+Given two serials of numbers k,m consist of only 0's and 1's .
+
+Compare each bit by bit in order and print numbers bit of bits differ from each other
+
+input format:
+First two lines consist of two binary numbers.
+
+Output format:
+Print number of bits differ from each from each other
+
+Note: input will be given in 0's and 1's Only
+
+Sample test:
+input:
+
+101
+111
+
+Output:
+
+1
+
+
+Sample test 2:
+
+input:
+
+011
+100
+
+Output:
+
+3
+
+
+
+Python:
+
+c=0
+k=input()
+m=input()
+for i in range(0,len(k)):
+    if(k[i]!=m[i]):
+        c=c+1
+print(c)
